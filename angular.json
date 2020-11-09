@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "surattamilsangam"
+    }
+  },
+  "defaultProject": "surattamilsangam",
+  "cli": {
+    "analytics": false
+  }
 }

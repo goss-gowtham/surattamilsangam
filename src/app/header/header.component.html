@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-xl  py-3 px-xl-5 row">
+  <li class="nav-item" *ngFor="let item of link">
+    <a class="nav-link link-button mat-body text-center" [href]="item.link"><span>{{item.name}}</span></a>
+  </li>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item" *ngFor="let item of link">
+        <a class="nav-link mx-sm-2 mx-md-2 mx-lg-2 mx-xl-3 link-button mat-body text-center" [href]="item.link"><span>{{item.name}}</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
