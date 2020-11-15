@@ -1,50 +1,6 @@
-.demo-button {
-  background-color:#1932f6;
-  color: #ffffff;
-  border-radius: 0.625rem;
-  font-weight: bold;
-}
-
-.login-button {
-  border-radius: 0.625rem;
-  color: #97a0b5;
-  font-weight: bold;
-  border: 1px solid #97a0b5;
-}
-
-.link-button {
-  font-weight: 600;
-  color: #97A0B5;
-  span {
-    margin: 0;
-  }
+.navbar {
+  background: #663311 none repeat scroll 0 0 !important;
   a {
-    text-decoration: none !important;
-    color: #97a0b5;
-  }
-}
-
-.link-button {
-  span:hover {
-    color: #1932f6;
-    border-bottom: 3px solid #1932f6;
-    padding-bottom: 2vmin;
-    cursor: pointer;
-  }
-}
-
-.logo {
-  .resource {
-    width: 60px;
-  }
-  .title {
-    font-weight: 600;
-  }
-}
-
-@media only screen and (max-width: 1024px) {
-  .d-button {
-    display:flex;
-    flex-direction: column;
+    color: #DF7500 !important;
   }
 }
