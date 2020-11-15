@@ -1,2 +1,25 @@
-<gallery class="custom" [items]="images" [imageSize]="'cover'" [counter]="false" thumbPosition="right" fluid></gallery>
-
+<div class="container-fluid px-0">
+  <gallery [items]="images" [thumbPosition]="'bottom'" fluid></gallery>
+  <section id="divider">
+    <div class="container py-3">
+      <div class="d-flex justify-content-between">
+        <h3 class="header">Events</h3>
+        <button class="btn btn-outline-primary" routerLink="/events">View more</button>
+      </div>
+      <div class="row">
+        <ng-container *ngFor="let item of events">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+            <div class="card shadow-lg my-3" style="width: 20rem;">
+              <img class="card-img-top image" [src]="item.src" [alt]="item.desc">
+              <div class="card-block p-3">
+                <h4 class="card-title">{{item.title}}</h4>
+                <p class="card-text">{{item.desc}}</p>
+                <p class="caption text-black-50">{{item.year}}</p>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </section>
+</div>

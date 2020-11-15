@@ -1,5 +1,37 @@
 gallery {
   height: 100vh !important;
   background-color: #fbf6d5;
-  max-width: 100vw !important;
+  width: 100vw !important;
+}
+
+.header {
+  font-family: 'Lobster';
+}
+
+#divider::before {
+  content: '';
+  display: block;
+  width: 50%;
+  border-left: 1px solid #cc6600;
+  height: 5rem;
+  max-height: 6rem;
+  top: 0;
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.image:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+  transition: 0.4s ease;
+}
+
+.btn {
+  color: #cc6600;
+  border-color: #cc6600;
+}
+
+.btn:hover {
+  background-color: #cc6600;
+  color: #fff;
 }

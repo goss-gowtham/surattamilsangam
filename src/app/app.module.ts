@@ -21,7 +21,14 @@ import { GalleryModule } from 'ng-gallery';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    GalleryModule,
+    GalleryModule.withConfig({
+      imageSize: 'cover',
+      loadingStrategy: 'lazy',
+      thumbWidth: 90,
+      thumbHeight: 60,
+      counter: false,
+      autoPlay: true
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

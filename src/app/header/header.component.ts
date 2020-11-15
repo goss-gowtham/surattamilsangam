@@ -23,7 +23,8 @@ export class HeaderComponent implements OnInit {
       name: 'CONTACT',
       link: '/pages/contact'
     },
-  ]
+  ];
+  navbarOpen = false;
 
   constructor() { }
 
