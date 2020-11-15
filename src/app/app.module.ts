@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,9 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home/home.component';
 import { GalleryModule } from 'ng-gallery';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ThirukkuralComponent } from './home/thirukkural/thirukkural.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,16 +21,20 @@ import { GalleryModule } from 'ng-gallery';
     FooterComponent,
 
     HomeComponent,
+    ThirukkuralComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
+
     GalleryModule.withConfig({
       imageSize: 'cover',
       loadingStrategy: 'lazy',
-      thumbWidth: 90,
-      thumbHeight: 60,
+      thumbWidth: 100,
+      thumbHeight: 80,
       counter: false,
       autoPlay: true
     }),
