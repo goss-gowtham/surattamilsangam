@@ -1,6 +1,10 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/dist/styles/ag-theme-material.min.css";
+@import "~ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material-mixin";
+
 body {
   background-color: #fbf6d5;
   overflow-x: hidden;
@@ -16,4 +20,40 @@ body {
   top: 0;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
+}
+
+.header {
+  font-family: 'Lobster';
+}
+
+
+.ag-theme-material {
+  @include ag-theme-material((
+    background-color: white,
+    font-size: 16px,
+    font-family: 'IBM Plex Sans'
+  ));
+
+  --ag-header-foreground-color: white;
+
+  .ag-root-wrapper {
+    border-radius: 20px;
+    box-shadow: 0 7px 15px rgba(0,0,0,0.15), 0 7px 6px rgba(0,0,0,0.08);
+  }
+
+  .ag-header {
+    border: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #663311;
+    font-size: 18px;
+  }
+
+  .ag-cell {
+    line-height: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+  }
 }

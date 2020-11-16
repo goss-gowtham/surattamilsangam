@@ -1,4 +1,24 @@
 <div class="container">
-  <h1 class="header">About us</h1>
-  <p></p>
+  <h1 class="header py-3">About us</h1>
+  <div class="d-flex justify-content-between">
+    <p class="text-justify px-4" style="line-height: 2rem;">
+      <i><b>Surat Tamil Sangam</b></i> was established in 1970 and has become a recognized organization of Tamil community by virtue of its principled approach in upholding the customs and culture of Tamilnadu.
+      <br/> Surat Tamil Sangam strives to bring all Tamilians and Tamil speaking well wishers under one umbrella and propagates and spreads the culture and customs by organizing various functions and celebrating important festivals of Tamilnadu.
+      <br/> The Sangam unites Tamil speaking people and make their presence identified in Surat city. Over the past 37 years the Sangam was led and managed by well learned and experienced members.
+    </p>
+  </div>
+  <section id="divider">
+    <div class="row d-flex justify-content-between align-items-center">
+      <h1 class="header py-3">Our Committee</h1>
+      <div class="col-4 form-group has-search">
+        <span class="fa fa-search form-control-feedback"></span>
+        <input type="text" class="form-control" (keyup)="filterSearch($event)" placeholder="Search Members">
+      </div>
+    </div>
+    <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight"
+      [gridOptions]="gridOptions" [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="columnDefs" [enableCellTextSelection]="true"
+      [rowData]="rowData" (gridReady)="gridReady($event)" overlayNoRowsTemplate="Sorry, no invoices found.">
+    </ag-grid-angular>
+  </section>
+  <app-thirukkural></app-thirukkural>
 </div>
