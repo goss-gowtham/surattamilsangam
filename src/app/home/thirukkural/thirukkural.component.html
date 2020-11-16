@@ -1,15 +1,24 @@
-<div class="container d-flex justify-content-center">
-  <div class="card bg-transparent mb-4 p-3 shadow col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-8">
-    <div class="row no-gutters d-flex justify-content-center">
-        <div class="col-sm-4 d-flex justify-content-center">
-            <img class="card-img" style="height: 120px; width: 120px;" src="https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/thiruvalluvar.png?alt=media" alt="Thiruvalluvar">
-        </div>
-        <div class="col-xs-12 col-sm-8 d-flex justify-content-center">
-            <div class="card-body">
-                <h5 class="card-title">Thirukkural #{{number}}</h5>
-                <p class="card-text">{{kural?.line1}}<br/>{{kural?.line2}}</p>
-            </div>
-        </div>
+<section id="divider" *ngIf="kural">
+  <div class="container d-flex justify-content-center">
+    <div class="card bg-transparent mb-4 p-3 shadow col-xs-12 col-sm-12 col-md-9 col-lg-8 col-xl-8">
+      <div class="row no-gutters d-flex justify-content-center">
+          <div class="col-sm-4 d-flex justify-content-center">
+              <img class="card-img" style="height: 120px; width: 120px;" src="https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/thiruvalluvar.png?alt=media" alt="Thiruvalluvar">
+          </div>
+          <div class="col-xs-12 col-sm-8 d-flex justify-content-center">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="card-text">திருக்குறள் #{{number}}</h5>
+                  <i [class]="!toggleMeaning ? 'fas fa-angle-down' : 'fas fa-angle-up'" (click)="toggleMeaning=!toggleMeaning"></i>
+                </div>
+                <p class="card-text font-weight-bold">{{kural?.line1}}<br/>{{kural?.line2}}</p>
+                <ng-container *ngIf="toggleMeaning">
+                  <hr/>
+                  <p><b>உரை:</b> {{kural.tam_exp}}</p>
+                </ng-container>
+              </div>
+          </div>
+      </div>
     </div>
   </div>
-</div>
+</section>

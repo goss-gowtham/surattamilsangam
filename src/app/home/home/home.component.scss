@@ -8,18 +8,6 @@ gallery {
   font-family: 'Lobster';
 }
 
-#divider::before {
-  content: '';
-  display: block;
-  width: 50%;
-  border-left: 1px solid #cc6600;
-  height: 5rem;
-  max-height: 6rem;
-  top: 0;
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-}
-
 .image:hover {
   cursor: pointer;
   transform: scale(1.08);

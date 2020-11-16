@@ -13,7 +13,7 @@ import { ThirukkuralComponent } from './thirukkural/thirukkural.component';
 
     GalleryModule
   ],
-  exports: [HomeComponent],
+  exports: [HomeComponent, ThirukkuralComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeModule { }

@@ -21,6 +21,8 @@
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@ng-bootstrap/ng-bootstrap": "^8.0.0",
+    "ag-grid-angular": "^24.1.0",
+    "ag-grid-community": "^24.1.0",
     "angular-cli-ghpages": "^0.6.2",
     "bootstrap": "^4.5.3",
     "jquery": "^3.5.1",

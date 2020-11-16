@@ -9,10 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class ThirukkuralComponent implements OnInit {
   kural: any;
   number = Math.floor(Math.random() * 1330) + 1;
+  toggleMeaning = false;
 
   constructor(private http: HttpClient) { }
 
-  async ngOnInit() {
+  ngOnInit(): void {
     try {
       this.http.get(`https://api-thirukkural.web.app/kural?num=${this.number}`).subscribe(d => {
         this.kural = d;

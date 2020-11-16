@@ -13,6 +13,8 @@ import { GalleryModule } from 'ng-gallery';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ThirukkuralComponent } from './home/thirukkural/thirukkural.component';
+import { AboutComponent } from './about/about/about.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,7 @@ import { ThirukkuralComponent } from './home/thirukkural/thirukkural.component';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    RouterModule,
     AppRoutingModule,
     NgbModule,
 
