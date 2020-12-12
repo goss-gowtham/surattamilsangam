@@ -6,7 +6,7 @@
 @import "~ag-grid-community/src/styles/ag-theme-material/sass/ag-theme-material-mixin";
 
 body {
-  background-color: #fbf6d5;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -24,6 +24,11 @@ body {
 
 .header {
   font-family: 'Lobster';
+  color: #663300;
+}
+
+.active {
+  color: #000;
 }
 
 
@@ -35,18 +40,27 @@ body {
   ));
 
   --ag-header-foreground-color: white;
+  --ag-header-cell-hover-background-color: #f6f6f6;
+  --ag-row-hover-color: #f6f6f6;
 
   .ag-root-wrapper {
-    border-radius: 20px;
+    border-radius: 8px;
     box-shadow: 0 7px 15px rgba(0,0,0,0.15), 0 7px 6px rgba(0,0,0,0.08);
   }
 
   .ag-header {
     border: 0;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: #663311;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #fbf6d5;
+    color: dimgray;
+    font-weight: 600;
     font-size: 18px;
+  }
+
+  .ag-header-cell {
+    color: #663300;
+    font-weight: 600;
   }
 
   .ag-cell {
@@ -56,4 +70,21 @@ body {
     font-size: 14px;
     font-weight: 500;
   }
+
+  .ag-paging-row-summary-panel {
+    display: none;
+  }
+}
+
+.btn {
+  color: #cc6600;
+  border-color: #cc6600;
+  border-radius: 8px;
+}
+
+.btn:hover, .btn:active, .btn:visited, .btn:focus, .btn-primary {
+  background-color: #cc6600 !important;
+  border-color: #cc6600;
+  color: #fff;
+  outline: none !important;
 }

@@ -1,31 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about/about.component';
-import { HomeComponent } from './home/home/home.component';
+import { ContactComponent } from './about/contact/contact.component';
 
 const routes: Routes = [{
   path: '',
   pathMatch: 'full',
-  redirectTo: '/home'
+  redirectTo: 'home'
   }, {
     path: 'home',
-    component: HomeComponent,
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
     data: { preload: true }
   }, {
     path: 'about',
-    component: AboutComponent,
     loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
   }, {
     path: 'events',
     loadChildren: () => import('./events/events.module').then(m => m.EventsModule),
   }, {
-    path: '**',
-    redirectTo: '/home'
+    path: 'contact',
+    component: ContactComponent
   }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    onSameUrlNavigation: 'reload',
+    scrollPositionRestoration: 'enabled', // Add options right here
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

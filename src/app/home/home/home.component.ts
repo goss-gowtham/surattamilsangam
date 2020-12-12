@@ -31,7 +31,12 @@ export class HomeComponent implements OnInit {
     title: 'Get together',
     desc: 'Lifetime members get together meet',
     year: '2019'
-  }];
+  }, {
+    src: 'https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/Home%20Gallery%2Fagm2019-1.jpg?alt=media',
+    title: 'AGM',
+    desc: 'A General Meet',
+    year: '2019'
+  }, ];
 
 
   constructor() { }

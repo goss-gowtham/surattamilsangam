@@ -1,0 +1,61 @@
+// Background
+.wrap {
+  background: linear-gradient(to bottom, #ffffff, #fbf6d5);
+  padding: 2rem;
+}
+
+
+// Start copying here
+$underline-color: #663300;
+
+.cool-b4-form {
+
+  .form-group {
+    position: relative;
+    padding-top: 20px;
+    margin-bottom: 0;
+    /* If there's only 1 input make it full height */
+    &:first-child:last-child {
+      height: 100%;
+      .form-control {
+        height: 100%;
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    .input-highlight {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: $underline-color;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      transition: width 0.4s ease;
+    }
+    label {
+      position: absolute;
+      left: 10px;
+      top: 25px;
+      transition: all 0.4s ease;
+    }
+    .form-control {
+      border-radius: 0;
+      border-width: 0 0 2px 0;
+      &:focus,
+      &.hasValue {
+        box-shadow: none;
+        border-color: #fbf6d5; // Otherwise the border turns blue
+        ~ .input-highlight {
+          width: 100%;
+        }
+        ~ label {
+          transform: scale(0.7);
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}

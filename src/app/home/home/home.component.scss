@@ -1,7 +1,5 @@
 gallery {
-  height: 100vh !important;
   background-color: #fbf6d5;
-  width: 100vw !important;
 }
 
 .image:hover {
@@ -10,12 +8,3 @@ gallery {
   transition: 0.4s ease;
 }
 
-.btn {
-  color: #cc6600;
-  border-color: #cc6600;
-}
-
-.btn:hover {
-  background-color: #cc6600;
-  color: #fff;
-}

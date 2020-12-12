@@ -5,10 +5,11 @@ import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about/about.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { HomeModule } from '../home/home.module';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
-  declarations: [AboutComponent],
+  declarations: [AboutComponent, ContactComponent],
   imports: [
     CommonModule,
     AboutRoutingModule,

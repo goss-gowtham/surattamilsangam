@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { GalleryModule } from 'ng-gallery';
 import { ThirukkuralComponent } from './thirukkural/thirukkural.component';
+import { HomeRoutingModule } from './home-routing.module';
 
 
 
@@ -11,7 +12,8 @@ import { ThirukkuralComponent } from './thirukkural/thirukkural.component';
   imports: [
     CommonModule,
 
-    GalleryModule
+    GalleryModule,
+    HomeRoutingModule,
   ],
   exports: [HomeComponent, ThirukkuralComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -1,25 +1,41 @@
 <div class="container-fluid px-0">
-  <gallery [items]="images" [thumbPosition]="'bottom'" fluid></gallery>
-  <section id="divider">
-    <div class="container py-3">
-      <div class="d-flex justify-content-between">
-        <h3 class="header">Events</h3>
-        <button class="btn btn-outline-primary" routerLink="/events">View more</button>
+  <img src="https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/stsbanner.png?alt=media" style="width: 100vw; height: 100%" alt="sts_banner" />
+  <section id="divider" style="background-color: #fbf6d5">
+    <h3 class="header text-center">About us</h3>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+        <gallery class="m-sm-0 m-md-5" [items]="images" [thumbPosition]="'bottom'"></gallery>
       </div>
-      <div class="row">
-        <ng-container *ngFor="let item of events">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center">
-            <div class="card shadow-lg my-3" style="width: 20rem;">
-              <img class="card-img-top image" [src]="item.src" [alt]="item.desc">
-              <div class="card-block p-3">
-                <h4 class="card-title">{{item.title}}</h4>
-                <p class="card-text">{{item.desc}}</p>
-                <p class="caption text-black-50">{{item.year}}</p>
-              </div>
+      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto">
+        <div class="d-flex justify-content-center align-items-center py-2">
+          <img style="width: 250px; height: 200px;" src="https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/stslogo_transparent.png?alt=media" alt="sts_logo"/>
+        </div>
+        <p class="p-4">Surat Tamil Sangam strives to bring all Tamilians and Tamil speaking well wishers under one umbrella and propagates and spreads
+          the culture and customs by organizing various functions and celebrating important festivals of Tamilnadu!</p>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center py-3">
+      <button class="btn btn-outline-primary" routerLink="/about">Know more</button>
+    </div>
+  </section>
+  <section id="divider">
+    <h3 class="header text-center">Events</h3>
+    <div class="row mx-auto">
+      <ng-container *ngFor="let item of events">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-center">
+          <div class="card shadow-lg my-3" style="width: 20rem;">
+            <img class="card-img-top image" [src]="item.src" [alt]="item.desc">
+            <div class="card-block p-3">
+              <h4 class="card-title">{{item.title}}</h4>
+              <p class="card-text">{{item.desc}}</p>
+              <p class="caption text-black-50">{{item.year}}</p>
             </div>
           </div>
-        </ng-container>
-      </div>
+        </div>
+      </ng-container>
+    </div>
+    <div class="d-flex justify-content-center my-3">
+      <button class="btn btn-outline-primary" routerLink="/events">View All Events</button>
     </div>
   </section>
   <app-thirukkural></app-thirukkural>

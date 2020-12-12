@@ -35,6 +35,7 @@ import { AgGridModule } from 'ag-grid-angular';
       thumbWidth: 100,
       thumbHeight: 80,
       counter: false,
+      playerInterval: 6000,
       autoPlay: true
     }),
   ],
