@@ -1,0 +1,32 @@
+gallery {
+  object-fit: cover !important;
+}
+
+.light-backdrop {
+  background-color: #fbf6d5;
+}
+
+.image-text span {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #fbf6d5;
+  padding: 1px 5px;
+  border-radius: 5px;
+  box-shadow: 5px 4px 15px;
+  font-size: 12px;
+}
+
+.image {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  background-image: url('../../../assets/stslogo.jpg');
+}
+
+.image:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  transition: 0.4s ease;
+}

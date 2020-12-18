@@ -20,15 +20,12 @@ body {
   top: 0;
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
+  margin-right: 0 !important;
 }
 
 .header {
   font-family: 'Lobster';
   color: #663300;
-}
-
-.active {
-  color: #000;
 }
 
 
@@ -88,3 +85,4 @@ body {
   color: #fff;
   outline: none !important;
 }
+

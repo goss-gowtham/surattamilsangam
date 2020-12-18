@@ -45,17 +45,17 @@ export class AboutComponent implements OnInit {
   membersColumnDefs: Array<ColDef> = [
     {
       headerName: 'S.No',
-      field: 'SNo',
+      field: 'sno',
       maxWidth: 200
     },
     {
       headerName: 'Name',
-      field: 'NAME',
+      field: 'name',
       minWidth: 200
     },
     {
       headerName: 'Area',
-      field: 'AREA',
+      field: 'area',
       minWidth: 200
     }
   ];
@@ -65,8 +65,9 @@ export class AboutComponent implements OnInit {
 
   async ngOnInit() {
     try {
-      this.rowData = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/About%2Fleaders.json?alt=media&token=0dbe0d58-7898-4121-881e-25c22c5147ff').toPromise();
-      this.membersRowData = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/About%2Fmembers.json?alt=media&token=0dbe0d58-7898-4121-881e-25c22c5147ff').toPromise();
+      const data: any = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/Data%2Fmembers.json?alt=media&token=53dae2b8-3fd3-4762-844c-841fc998e50b').toPromise();
+      this.rowData = data.members;
+      this.membersRowData = data.leaders;
     } catch(e) {
       console.log(e);
       this.rowData = LEADERS_ROW_DATA;

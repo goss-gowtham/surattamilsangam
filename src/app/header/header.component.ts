@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,27 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  link: [
-    {
-      name: 'HOME',
-      link: '/pages/home'
-    },
-    {
-      name: 'ABOUT',
-      link: '/pages/home/about'
-    },
-    {
-      name: 'BLOG',
-      link: '#blog'
-    },
-    {
-      name: 'CONTACT',
-      link: '/pages/contact'
-    },
-  ];
+  active = 'home';
   navbarOpen = false;
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.events.subscribe(
+      (event: any) => {
+        if (event instanceof NavigationEnd) {
+          this.active = this.router.url.split('/')[1];
+        }
+      }
+    );
+  }
 
   ngOnInit(): void {
   }

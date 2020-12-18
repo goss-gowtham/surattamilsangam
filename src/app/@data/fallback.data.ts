@@ -56,58 +56,58 @@ export const LEADERS_ROW_DATA = [{
 
 export const MEMBERS_ROW_DATA = [
   {
-    "SNo": 1,
-    "NAME": "Mr. S. Shanmugam",
-    "AREA": "Rander/Tarwadi"
+    "sno": 1,
+    "name": "Mr. S. Shanmugam",
+    "area": "Rander/Tarwadi"
   },
   {
-    "SNo": 2,
-    "NAME": "Mr. B. Badrinarayanan",
-    "AREA": "Kribhco"
+    "sno": 2,
+    "name": "Mr. B. Badrinarayanan",
+    "area": "Kribhco"
   },
   {
-    "SNo": 3,
-    "NAME": "Mr. G. Thingalchezian",
-    "AREA": "Adajan"
+    "sno": 3,
+    "name": "Mr. G. Thingalchezian",
+    "area": "Adajan"
   },
   {
-    "SNo": 4,
-    "NAME": "Mr. Balachandar",
-    "AREA": "Adajan"
+    "sno": 4,
+    "name": "Mr. Balachandar",
+    "area": "Adajan"
   },
   {
-    "SNo": 5,
-    "NAME": "Mr. S. Ruban",
-    "AREA": "Varacha"
+    "sno": 5,
+    "name": "Mr. S. Ruban",
+    "area": "Varacha"
   },
   {
-    "SNo": 6,
-    "NAME": "Mr. S. Kiranswamy",
-    "AREA": "Udhna"
+    "sno": 6,
+    "name": "Mr. S. Kiranswamy",
+    "area": "Udhna"
   },
   {
-    "SNo": 7,
-    "NAME": "Mrs. Suja Arokiaraj",
-    "AREA": "Piplod"
+    "sno": 7,
+    "name": "Mrs. Suja Arokiaraj",
+    "area": "Piplod"
   },
   {
-    "SNo": 8,
-    "NAME": "Mr. P. V. Ramani",
-    "AREA": "Adajan"
+    "sno": 8,
+    "name": "Mr. P. V. Ramani",
+    "area": "Adajan"
   },
   {
-    "SNo": 9,
-    "NAME": "Mr. T. Murugan",
-    "AREA": "Icchapore"
+    "sno": 9,
+    "name": "Mr. T. Murugan",
+    "area": "Icchapore"
   },
   {
-    "SNo": 10,
-    "NAME": "Mr. Sankaranarayanan",
-    "AREA": "Icchapore"
+    "sno": 10,
+    "name": "Mr. Sankaranarayanan",
+    "area": "Icchapore"
   },
   {
-    "SNo": 11,
-    "NAME": "Mr. Rathinaswamy",
-    "AREA": "Rander"
+    "sno": 11,
+    "name": "Mr. Rathinaswamy",
+    "area": "Rander"
   }
 ]
