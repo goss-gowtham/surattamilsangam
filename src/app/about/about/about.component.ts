@@ -66,8 +66,8 @@ export class AboutComponent implements OnInit {
   async ngOnInit() {
     try {
       const data: any = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/Data%2Fmembers.json?alt=media&token=53dae2b8-3fd3-4762-844c-841fc998e50b').toPromise();
-      this.rowData = data.members;
-      this.membersRowData = data.leaders;
+      this.rowData = data.leaders;
+      this.membersRowData = data.members;
     } catch(e) {
       console.log(e);
       this.rowData = LEADERS_ROW_DATA;
