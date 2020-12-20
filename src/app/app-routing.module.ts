@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactComponent } from './about/contact/contact.component';
+import { HomeComponent } from './home/home/home.component';
 
 const routes: Routes = [{
     path: 'home',
@@ -17,8 +18,7 @@ const routes: Routes = [{
     component: ContactComponent
   }, {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'home'
+    component: HomeComponent
   }];
 
 @NgModule({
