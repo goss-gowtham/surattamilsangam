@@ -77,8 +77,10 @@ export class AboutComponent implements OnInit {
   gridReady($event: any): void {
     this.gridAPI = $event.api;
     this.columnAPI = $event.columnAPI;
-    this.gridAPI.sizeColumnsToFit();
-    this.gridAPI.resetRowHeights();
+    setTimeout(() => {
+      this.gridAPI.sizeColumnsToFit();
+      this.gridAPI.resetRowHeights();
+    }, 300);
     window.onresize = () => {
       this.gridAPI.sizeColumnsToFit();
     }
@@ -87,8 +89,10 @@ export class AboutComponent implements OnInit {
   membersGridReady($event: any): void {
     this.membersGridAPI = $event.api;
     this.membersColumnAPI = $event.columnAPI;
-    this.membersGridAPI.sizeColumnsToFit();
-    this.membersGridAPI.resetRowHeights();
+    setTimeout(() => {
+      this.membersGridAPI.sizeColumnsToFit();
+      this.membersGridAPI.resetRowHeights();
+    }, 300);
     window.onresize = () => {
       this.membersGridAPI.sizeColumnsToFit();
     }
