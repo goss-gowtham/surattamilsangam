@@ -1,35 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about/about.component';
-import { ContactComponent } from './about/contact/contact.component';
-import { EventsComponent } from './events/events/events.component';
-import { HomeComponent } from './home/home/home.component';
+import { AboutComponent } from './core/about/about.component';
+import { ContactComponent } from './core/contact/contact.component';
+import { EventsComponent } from './core/events/events.component';
+import { HomeComponent } from './core/home/home.component';
 
 const routes: Routes = [{
     path: 'home',
-    component: HomeComponent,
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    data: { preload: true }
+    component: HomeComponent
   }, {
     path: 'about',
-    component: AboutComponent,
-    loadChildren: () => import('./about/about.module').then(m => m.AboutModule),
+    component: AboutComponent
   }, {
     path: 'events',
-    component: EventsComponent,
-    loadChildren: () => import('./events/events.module').then(m => m.EventsModule),
+    component: EventsComponent
   }, {
     path: 'contact',
     component: ContactComponent
   }, {
     path: '',
-    component: HomeComponent
+    redirectTo: '/home',
+    pathMatch: 'full',
   }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     onSameUrlNavigation: 'reload',
-    scrollPositionRestoration: 'enabled', // Add options right here
+    scrollPositionRestoration: 'enabled',
   })],
   exports: [RouterModule]
 })

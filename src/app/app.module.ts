@@ -12,11 +12,21 @@ import { GalleryModule } from 'ng-gallery';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AgGridModule } from 'ag-grid-angular';
+import { ThirukkuralComponent } from './core/thirukkural/thirukkural.component';
+import { HomeComponent } from './core/home/home.component';
+import { EventsComponent } from './core/events/events.component';
+import { AboutComponent } from './core/about/about.component';
+import { ContactComponent } from './core/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    ThirukkuralComponent,
+    HomeComponent,
+    EventsComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
