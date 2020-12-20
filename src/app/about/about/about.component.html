@@ -10,7 +10,7 @@
   <section id="divider">
     <h1 class="header text-center">Our Committee</h1>
     <div class="row d-flex justify-content-between align-items-center py-3">
-      <h2 class="header">Office Bearers</h2>
+      <h2 class="header px-3">Office Bearers</h2>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 form-group has-search my-auto">
         <span class="fa fa-search form-control-feedback"></span>
         <input type="text" class="form-control" (keyup)="filterSearch($event)" placeholder="Search Leaders">
@@ -21,7 +21,7 @@
       [rowData]="rowData" (gridReady)="gridReady($event)" overlayNoRowsTemplate="Sorry, no leader found. Refresh page">
     </ag-grid-angular>
     <div class="row d-flex justify-content-between align-items-center py-3">
-      <h2 class="header">Committee Members</h2>
+      <h2 class="header px-3">Committee Members</h2>
       <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 form-group has-search my-auto">
         <span class="fa fa-search form-control-feedback"></span>
         <input type="text" class="form-control" (keyup)="filterMembersSearch($event)" placeholder="Search Members">

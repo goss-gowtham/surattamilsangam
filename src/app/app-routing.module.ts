@@ -3,10 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { ContactComponent } from './about/contact/contact.component';
 
 const routes: Routes = [{
-  path: '',
-  pathMatch: 'full',
-  redirectTo: 'home'
-  }, {
     path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
     data: { preload: true }
@@ -19,6 +15,10 @@ const routes: Routes = [{
   }, {
     path: 'contact',
     component: ContactComponent
+  }, {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'home'
   }];
 
 @NgModule({

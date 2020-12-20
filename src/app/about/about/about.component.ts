@@ -65,9 +65,8 @@ export class AboutComponent implements OnInit {
 
   async ngOnInit() {
     try {
-      const data: any = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/Data%2Fmembers.json?alt=media&token=53dae2b8-3fd3-4762-844c-841fc998e50b').toPromise();
-      this.rowData = data.leaders;
-      this.membersRowData = data.members;
+      this.rowData = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/Data%2Fleaders.json?alt=media').toPromise();
+      this.membersRowData = await this.http.get('https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/Data%2Fmembers.json?alt=media').toPromise();
     } catch(e) {
       console.log(e);
       this.rowData = LEADERS_ROW_DATA;
@@ -78,10 +77,8 @@ export class AboutComponent implements OnInit {
   gridReady($event: any): void {
     this.gridAPI = $event.api;
     this.columnAPI = $event.columnAPI;
-    setTimeout(() => {
-      this.gridAPI.sizeColumnsToFit();
-      this.gridAPI.resetRowHeights();
-    }, 600);
+    this.gridAPI.sizeColumnsToFit();
+    this.gridAPI.resetRowHeights();
     window.onresize = () => {
       this.gridAPI.sizeColumnsToFit();
     }
@@ -90,10 +87,8 @@ export class AboutComponent implements OnInit {
   membersGridReady($event: any): void {
     this.membersGridAPI = $event.api;
     this.membersColumnAPI = $event.columnAPI;
-    setTimeout(() => {
-      this.membersGridAPI.sizeColumnsToFit();
-      this.membersGridAPI.resetRowHeights();
-    }, 500);
+    this.membersGridAPI.sizeColumnsToFit();
+    this.membersGridAPI.resetRowHeights();
     window.onresize = () => {
       this.membersGridAPI.sizeColumnsToFit();
     }
