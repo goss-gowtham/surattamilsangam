@@ -12,13 +12,15 @@
         </li>
         <!-- <li class="nav-item"> -->
           <!-- <a class="nav-link" routerLink="/">Articles</a> -->
-          <li class="nav-item">
-            <a class="nav-link" (click)="active='about'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'about', 'not-active': active !== 'about' }" routerLink="/about">About</a>
+      <li class="nav-item">
+        <a class="nav-link" (click)="active='about'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'about', 'not-active': active !== 'about' }" routerLink="/about">About</a>
           <li class="nav-item">
             <a class="nav-link" (click)="active='events'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'events', 'not-active': active !== 'events' }" routerLink="/events">Events</a>
             <li class="nav-item">
-              <a class="nav-link" (click)="active='contact'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'contact', 'not-active': active !== 'contact' }" routerLink="/contact">Contact</a>
-              </li>
+              <a class="nav-link" (click)="active='matrimony'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'matrimony', 'not-active': active !== 'matrimony' }" routerLink="/matrimony">Matrimony</a>
+              <li class="nav-item">
+                <a class="nav-link" (click)="active='contact'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'contact', 'not-active': active !== 'contact' }" routerLink="/contact">Contact</a>
+                  </li>
       </ul>
     </div>
   </div>

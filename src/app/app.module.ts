@@ -17,6 +17,7 @@ import { HomeComponent } from './core/home/home.component';
 import { EventsComponent } from './core/events/events.component';
 import { AboutComponent } from './core/about/about.component';
 import { ContactComponent } from './core/contact/contact.component';
+import { MatrimonyComponent } from './core/matrimony/matrimony.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactComponent } from './core/contact/contact.component';
     HomeComponent,
     EventsComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    MatrimonyComponent
   ],
   imports: [
     BrowserModule,

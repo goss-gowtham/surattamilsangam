@@ -4,6 +4,7 @@ import { AboutComponent } from './core/about/about.component';
 import { ContactComponent } from './core/contact/contact.component';
 import { EventsComponent } from './core/events/events.component';
 import { HomeComponent } from './core/home/home.component';
+import { MatrimonyComponent } from './core/matrimony/matrimony.component';
 
 const routes: Routes = [{
     path: 'home',
@@ -17,6 +18,9 @@ const routes: Routes = [{
   }, {
     path: 'contact',
     component: ContactComponent
+  }, {
+    path: 'matrimony',
+    component: MatrimonyComponent
   }, {
     path: '',
     redirectTo: '/home',
