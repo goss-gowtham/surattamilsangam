@@ -22,6 +22,10 @@ body {
   transform: translateX(100%);
 }
 
+.row, gallery, .container, .container-fluid {
+  max-width: 100% !important;
+}
+
 .header {
   font-family: 'Lobster';
   color: #663300;

@@ -1,18 +1,18 @@
 <div class="container-fluid px-0">
-  <img [src]="firebasePrefix + 'stsbanner.png?alt=media'" style="width: 100vw; height: 100%; min-height: 50vh; object-fit: cover;" alt="sts_banner" />
+  <img [src]="firebasePrefix + 'stsbanner.png?alt=media'" style="width: 100vw; max-width: 100vw; height: 95vh; min-height: 95vh; object-fit: cover;" alt="sts_banner" />
   <section id="divider" style="background-color: #fbf6d5">
     <h3 class="header text-center">About us</h3>
-    <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+    <div class="row mx-auto">
+      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 px-0">
         <gallery class="m-sm-0 m-md-5" [items]="images" [thumbPosition]="'bottom'" [counter]="false"></gallery>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 my-auto">
         <div class="d-flex justify-content-center align-items-center py-2">
           <img style="width: 250px; height: 200px;" [src]="firebasePrefix + 'stslogo_transparent.png?alt=media'" alt="sts_logo"/>
         </div>
-        <p class="p-4">Surat Tamil Sangam strives to bring all Tamilians and Tamil speaking well wishers under one umbrella and propagates and spreads
+        <p class="text-justify">Surat Tamil Sangam strives to bring all Tamilians and Tamil speaking well wishers under one umbrella and propagates and spreads
           the culture and customs by organizing various functions and celebrating important festivals of Tamilnadu!</p>
-      </div>
+        </div>
     </div>
     <div class="d-flex justify-content-center py-3">
       <button class="btn btn-outline-primary" routerLink="/about">Know more</button>
@@ -23,9 +23,9 @@
     <div class="row mx-auto">
       <ng-container *ngFor="let item of events">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-center">
-          <div class="card shadow-lg my-3" style="width: 20rem; cursor: pointer;" (click)="openModal(item)">
+          <div class="card shadow-lg my-3" style="width: 20rem; cursor: pointer;" routerLink="/events">
             <div class="image-text">
-              <img class="card-img-top image" style="height: 200px; object-fit: cover;" [src]="item.thumbnail" [alt]="item.desc">
+              <img class="card-img-top image" style="height: 200px; object-fit: fill;" [src]="item.thumbnail" [alt]="item.desc">
               <span>{{item.year}}</span>
             </div>
             <div class="card-block p-3">
@@ -42,15 +42,3 @@
   </section>
   <app-thirukkural></app-thirukkural>
 </div>
-
-<ng-template #carousel let-modal>
-  <div class="modal-header">
-    <h6 class="modal-title text-capitalize">{{modalData.title}}</h6>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body p-0">
-    <gallery [items]="modalData.images" [dots]="true" [dotsSize]="20" [thumbPosition]="'bottom'"></gallery>
-  </div>
-</ng-template>

@@ -1,6 +1,6 @@
 # Surattamilsangam
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
+This project is purely built upon Angular and hosted in Github pages with Google Domain's hosting service. You can make a PR for any issues you find. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
 ## Development server
 
