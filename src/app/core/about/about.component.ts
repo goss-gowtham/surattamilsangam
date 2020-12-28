@@ -9,6 +9,7 @@ import { LEADERS_ROW_DATA, MEMBERS_ROW_DATA } from 'src/app/@data/fallback.data'
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  diffYear = new Date().getFullYear() - 1970;
   gridAPI: GridApi;
   columnAPI: ColumnApi;
   DEFAULT_COLUMN_DEF = {
