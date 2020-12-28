@@ -30,3 +30,10 @@ gallery {
   transform: scale(1.03);
   transition: 0.4s ease;
 }
+
+.ball {
+  position: fixed;
+  border-radius: 100%;
+  opacity: 0.9;
+  z-index: -1;
+}

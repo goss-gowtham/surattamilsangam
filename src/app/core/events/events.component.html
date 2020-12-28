@@ -1,4 +1,4 @@
-<div class="container">
+<div id="balls" class="container">
   <h1 class="header py-3 text-center">Events</h1>
   <div class="row mx-auto">
     <ng-container *ngFor="let item of events">
@@ -19,7 +19,10 @@
   <div class="d-flex justify-content-center py-4">
     <button class="btn btn-outline-primary" routerLink="/contact">Add as a Member</button>
   </div>
-  <app-thirukkural></app-thirukkural>
+  <!-- <section id="divider">
+    <div class="row">
+    </div>
+  </section> -->
 </div>
 
 <ng-template #carousel let-modal>
