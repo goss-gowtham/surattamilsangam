@@ -1,0 +1,36 @@
+<div class="container">
+  <h1 class="header py-3 text-center">Articles & Info</h1>
+  <div class="row d-flex justify-content-center">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-9 col-xl-8">
+      <ngb-accordion [closeOthers]="true" activeIds="static-1">
+        <ngb-panel id="static-1" title="ஆத்திசூடி">
+          <ng-template ngbPanelContent>
+            <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight" [gridOptions]="gridOptions"
+            [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="columnDefs"
+            [rowData]="rowData" (gridReady)="gridReady($event)" overlayNoRowsTemplate="Sorry, no Aathichudi found. Refresh page">
+            </ag-grid-angular>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel *ngFor="let article of articles; index as i" [id]="'static-'+i+2">
+          <ng-template ngbPanelTitle>
+            {{article.title}}
+          </ng-template>
+          <ng-template ngbPanelContent style="max-width: 100%; overflow-wrap: break-word;">
+            <pre>{{article.content}}</pre>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel [id]="'static-'+articles.length + 2" title="Professions in Tamil">
+          <ng-template ngbPanelContent>
+            <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight" [gridOptions]="professionsGridOptions"
+            [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="professionsColumnDefs"
+            [rowData]="professionsRowData" (gridReady)="professionsGridReady($event)" overlayNoRowsTemplate="Sorry, no Professions found. Refresh page">
+            </ag-grid-angular>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center py-4">
+    <button class="btn btn-outline-primary" routerLink="/contact">Publish your article</button>
+  </div>
+</div>

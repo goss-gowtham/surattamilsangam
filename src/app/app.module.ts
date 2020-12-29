@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgbAccordionModule, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { GalleryModule } from 'ng-gallery';
 
@@ -18,6 +18,7 @@ import { EventsComponent } from './core/events/events.component';
 import { AboutComponent } from './core/about/about.component';
 import { ContactComponent } from './core/contact/contact.component';
 import { MatrimonyComponent } from './core/matrimony/matrimony.component';
+import { ArticlesComponent } from './core/articles/articles.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatrimonyComponent } from './core/matrimony/matrimony.component';
     EventsComponent,
     AboutComponent,
     ContactComponent,
-    MatrimonyComponent
+    MatrimonyComponent,
+    ArticlesComponent
   ],
   imports: [
     BrowserModule,
