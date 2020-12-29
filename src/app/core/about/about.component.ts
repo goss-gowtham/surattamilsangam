@@ -41,7 +41,7 @@ export class AboutComponent implements OnInit {
   membersColumnAPI: ColumnApi;
   membersGridOptions: GridOptions = {
     pagination: true,
-    paginationPageSize: 5,
+    paginationPageSize: 10,
   };
   membersColumnDefs: Array<ColDef> = [
     {

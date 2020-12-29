@@ -10,17 +10,17 @@
         <li class="nav-item">
           <a class="nav-link" (click)="active='home'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'home' || active === '', 'not-active': active !== 'home' }" routerLink="/home">Home <span class="sr-only">(current)</span></a>
         </li>
-        <!-- <li class="nav-item"> -->
-          <!-- <a class="nav-link" routerLink="/">Articles</a> -->
       <li class="nav-item">
         <a class="nav-link" (click)="active='about'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'about', 'not-active': active !== 'about' }" routerLink="/about">About</a>
           <li class="nav-item">
             <a class="nav-link" (click)="active='events'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'events', 'not-active': active !== 'events' }" routerLink="/events">Events</a>
             <li class="nav-item">
-              <a class="nav-link" (click)="active='matrimony'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'matrimony', 'not-active': active !== 'matrimony' }" routerLink="/matrimony">Matrimony</a>
+              <a class="nav-link" (click)="active='articles'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'articles', 'not-active': active !== 'articles' }" routerLink="/articles">Articles</a>
               <li class="nav-item">
-                <a class="nav-link" (click)="active='contact'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'contact', 'not-active': active !== 'contact' }" routerLink="/contact">Contact</a>
-                  </li>
+                <a class="nav-link" (click)="active='matrimony'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'matrimony', 'not-active': active !== 'matrimony' }" routerLink="/matrimony">Matrimony</a>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="active='contact'; navbarOpen = !navbarOpen;" [ngClass]="{'active': active === 'contact', 'not-active': active !== 'contact' }" routerLink="/contact">Contact</a>
+                    </li>
       </ul>
     </div>
   </div>

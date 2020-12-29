@@ -1,38 +1,46 @@
 <div class="container">
   <h1 class="header py-3 text-center">About us</h1>
-  <div class="d-flex justify-content-between">
-    <p class="text-justify px-2" style="line-height: 2rem;">
-      <i><b>Surat Tamil Sangam</b></i> was established in 1970 and has become a recognized organization of Tamil community by virtue of its principled approach in upholding the customs and culture of Tamilnadu.
-      <br/> Surat Tamil Sangam strives to bring all Tamilians and Tamil speaking well wishers under one umbrella and propagates and spreads the culture and customs by organizing various functions and celebrating important festivals of Tamilnadu.
-      <br/> The Sangam unites Tamil speaking people and make their presence identified in Surat city. Over the past <b>{{diffYear}}</b> years the Sangam was led and managed by well learned and experienced members.
-    </p>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 mx-auto">
+      <p class="text-justify px-2" style="line-height: 2rem;">
+        <i><b>Surat Tamil Sangam</b></i> was established in 1970 and has become a recognized organization of Tamil community by virtue of its principled approach in upholding the customs and culture of Tamilnadu.
+        <br/> Surat Tamil Sangam strives to bring all Tamilians and Tamil speaking well wishers under one umbrella and propagates and spreads the culture and customs by organizing various functions and celebrating important festivals of Tamilnadu.
+        <br/> The Sangam unites Tamil speaking people and make their presence identified in Surat city. Over the past <b>{{diffYear}} years</b> the Sangam was led and managed by well learned and experienced members.
+      </p>
+    </div>
   </div>
   <section id="divider">
     <h1 class="header text-center">Our Committee</h1>
-    <div class="row d-flex justify-content-between align-items-center py-3">
-      <h2 class="header px-3">Office Bearers</h2>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 form-group has-search my-auto">
-        <span class="fa fa-search form-control-feedback"></span>
-        <input type="text" class="form-control" (keyup)="filterSearch($event)" placeholder="Search Leaders">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 mx-auto">
+        <div class="row d-flex justify-content-between align-items-center py-3">
+          <h2 class="header px-3">Office Bearers</h2>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 form-group has-search my-auto">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" (keyup)="filterSearch($event)" placeholder="Search Leaders">
+          </div>
+        </div>
+        <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight"
+          [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="columnDefs"
+          [rowData]="rowData" (gridReady)="gridReady($event)" overlayNoRowsTemplate="Sorry, no leader found. Refresh page">
+        </ag-grid-angular>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-11 col-lg-11 col-xl-10 mx-auto">
+        <div class="row d-flex justify-content-between align-items-center py-3">
+          <h2 class="header px-3">Committee Members</h2>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 form-group has-search my-auto">
+            <span class="fa fa-search form-control-feedback"></span>
+            <input type="text" class="form-control" (keyup)="filterMembersSearch($event)" placeholder="Search Members">
+          </div>
+        </div>
+        <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight" [gridOptions]="membersGridOptions"
+          [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="membersColumnDefs"
+          [rowData]="membersRowData" (gridReady)="membersGridReady($event)" overlayNoRowsTemplate="Sorry, no members found. Refresh page">
+        </ag-grid-angular>
       </div>
     </div>
-    <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight"
-      [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="columnDefs"
-      [rowData]="rowData" (gridReady)="gridReady($event)" overlayNoRowsTemplate="Sorry, no leader found. Refresh page">
-    </ag-grid-angular>
-    <div class="row d-flex justify-content-between align-items-center py-3">
-      <h2 class="header px-3">Committee Members</h2>
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 form-group has-search my-auto">
-        <span class="fa fa-search form-control-feedback"></span>
-        <input type="text" class="form-control" (keyup)="filterMembersSearch($event)" placeholder="Search Members">
-      </div>
-    </div>
-    <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight" [gridOptions]="membersGridOptions"
-      [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="membersColumnDefs"
-      [rowData]="membersRowData" (gridReady)="membersGridReady($event)" overlayNoRowsTemplate="Sorry, no members found. Refresh page">
-    </ag-grid-angular>
   </section>
   <div class="d-flex justify-content-center py-4">
-    <button class="btn btn-outline-primary" routerLink="/contact">Add as a Member</button>
+    <button class="btn btn-outline-primary" routerLink="/contact">Request for Membership</button>
   </div>
 </div>
