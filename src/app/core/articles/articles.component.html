@@ -19,7 +19,7 @@
             <pre>{{article.content}}</pre>
           </ng-template>
         </ngb-panel>
-        <ngb-panel [id]="'static-'+articles.length + 2" title="Professions in Tamil">
+        <ngb-panel [id]="'static-'+articles?.length + 2" title="Professions in Tamil">
           <ng-template ngbPanelContent>
             <ag-grid-angular class="ag-theme-material mx-auto mb-4" domLayout="autoHeight" [gridOptions]="professionsGridOptions"
             [defaultColDef]="DEFAULT_COLUMN_DEF" [columnDefs]="professionsColumnDefs"

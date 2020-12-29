@@ -12,6 +12,10 @@ export class AboutComponent implements OnInit {
   diffYear = new Date().getFullYear() - 1970;
   gridAPI: GridApi;
   columnAPI: ColumnApi;
+  gridOptions: GridOptions = {
+    pagination: true,
+    paginationPageSize: 10,
+  };
   DEFAULT_COLUMN_DEF = {
     autoHeight: true,
     sortable: true,
@@ -27,12 +31,14 @@ export class AboutComponent implements OnInit {
     {
       headerName: 'Name',
       field: 'name',
-      minWidth: 200
+      minWidth: 200,
+      cellStyle: {'text-transform': 'capitalize'}
     },
     {
       headerName: 'Designation',
       field: 'desn',
-      minWidth: 200
+      minWidth: 200,
+      cellStyle: {'text-transform': 'capitalize'}
     }
   ];
   rowData;
@@ -52,7 +58,8 @@ export class AboutComponent implements OnInit {
     {
       headerName: 'Name',
       field: 'name',
-      minWidth: 200
+      minWidth: 200,
+      cellStyle: {'text-transform': 'capitalize'}
     },
     {
       headerName: 'Area',

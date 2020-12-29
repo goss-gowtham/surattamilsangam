@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ImageItem } from 'ng-gallery';
+import { ImageItem, YoutubeItem } from 'ng-gallery';
 
 @Component({
   selector: 'app-events',
@@ -15,11 +15,12 @@ export class EventsComponent implements OnInit {
   firebasePrefix = 'https://firebasestorage.googleapis.com/v0/b/surattamilsangam-84683.appspot.com/o/';
   modalData;
   upcomingEventList: any;
-  colors = ['#24bd24', '#E8CEBF', '#4DA8DA', '#FFD6C', '#9DC88D', '#A3BCB6', '#ffa8B6', '#8458B3']
+  colors = ['#24bd24', '#E8CEBF', '#4DA8DA', '#FFD6C', '#9DC88D', '#A3BCB6', '#ffa8B6', '#8458B3'];
+  autoPlay;
 
   constructor(
     private http: HttpClient,
-    private modalService: NgbModal
+    private modalService: NgbModal,
     ) { }
 
   async ngOnInit() {
@@ -88,6 +89,7 @@ export class EventsComponent implements OnInit {
   }
 
   openModal(event) {
+    this.autoPlay = true;
     let imagesArray = [];
     this.modalData = {};
     if (event.hasOwnProperty('photoCount')) {
@@ -102,6 +104,10 @@ export class EventsComponent implements OnInit {
     this.modalData.images = imagesArray.map((img) => {
       return new ImageItem({ src: img, thumb: img});
     });
+    if (event.hasOwnProperty('youtube')) {
+      this.autoPlay = false;
+      this.modalData.images.push(new YoutubeItem({type: 'youtube', autoplay: true, src: event.youtube}));
+    }
     this.modalService.open(this.carouselRef, {centered: true, backdropClass: 'light-backdrop'})
   }
 

@@ -21,19 +21,22 @@
   </div>
   <section id="divider" *ngIf="upcomingEventList?.length > 0">
     <h1 class="header py-3 text-center">Upcoming Events</h1>
-    <div class="row d-flex justify-content-center">
+    <div class="row mx-auto d-flex justify-content-center">
       <ng-container *ngFor="let upcomingEvent of upcomingEventList">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
           <div class="card do-true mx-2" [ngStyle]="{'background-color': upcomingEvent.color}">
             <ng-container *ngIf="upcomingEvent?.images?.length > 1">
-              <img class="card-img-top" [src]="upcomingEvent?.thumbnail" (click)="openModal(upcomingEvent?.images)" alt="Card image cap">
+              <img class="card-img-top" [src]="upcomingEvent?.thumbnail" style="cursor: pointer;" (click)="openModal(upcomingEvent?.images)" alt="Card image cap">
             </ng-container>
-            <div class="card-header">
+            <div class="card-header" [ngStyle]="{'background-color': upcomingEvent.color}">
               <small>{{upcomingEvent.date}} | {{upcomingEvent.time}}</small>
             </div>
             <div class="card-body p-3">
                 <h5 class="card-title">{{upcomingEvent.title}}</h5>
                 <p class="card-text">{{upcomingEvent.description}}</p>
+                <ng-container *ngIf="upcomingEvent?.location">
+                  <a [href]="upcomingEvent.locationURL" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i> Location: {{upcomingEvent.location}}</a>
+                </ng-container>
             </div>
           </div>
         </div>
@@ -50,6 +53,6 @@
     </button>
   </div>
   <div class="modal-body p-0">
-    <gallery [items]="modalData.images" [dots]="true" [dotsSize]="20" [thumbPosition]="'bottom'"></gallery>
+    <gallery [items]="modalData.images" [dots]="true" [dotsSize]="20" [thumbPosition]="'bottom'" [autoPlay]="autoPlay"></gallery>
   </div>
 </ng-template>
