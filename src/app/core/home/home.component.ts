@@ -23,8 +23,8 @@ export class HomeComponent implements OnInit {
       return new ImageItem({ src: image, thumb: image});
     });
     let data: any = await this.http.get(this.firebasePrefix + 'Data%2Fevents.json?alt=media').toPromise();
-    this.events = data.events.sort((a, b) => b.year - a.year);
-    this.events = data.events.slice(0,4);
+    this.events = data.sort((a, b) => b.year - a.year);
+    this.events = data.slice(0,4);
   }
 
 }
