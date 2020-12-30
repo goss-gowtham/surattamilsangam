@@ -31,7 +31,7 @@ export class ArticlesComponent implements OnInit {
     }, {
       headerName: 'Abbreviation',
       field: 'abbreviation',
-      minWidth: 100,
+      minWidth: 200,
     }, {
       headerName: 'Translation',
       field: 'translation',
@@ -52,7 +52,7 @@ export class ArticlesComponent implements OnInit {
     }, {
       headerName: 'Profession',
       field: 'profession',
-      minWidth: 100,
+      minWidth: 200,
     }, {
       headerName: 'Tamil Name',
       field: 'tamil_name',

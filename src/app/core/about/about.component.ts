@@ -39,6 +39,19 @@ export class AboutComponent implements OnInit {
       field: 'desn',
       minWidth: 200,
       cellStyle: {'text-transform': 'capitalize'}
+    },
+    {
+      headerName: 'Phone',
+      field: 'phone',
+      minWidth: 150,
+      cellRenderer: (params) => {
+        console.log(params);
+        let keyData = params.data.phone;
+        let newLink =
+        `<a href= https://ctrlq.org/call/${keyData}
+        target="_blank">${keyData}</a>`;
+        return newLink;
+      }
     }
   ];
   rowData;
