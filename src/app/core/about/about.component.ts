@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   columnAPI: ColumnApi;
   gridOptions: GridOptions = {
     pagination: true,
-    paginationPageSize: 10,
+    paginationPageSize: 14,
   };
   DEFAULT_COLUMN_DEF = {
     autoHeight: true,

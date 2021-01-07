@@ -19,6 +19,14 @@ gallery {
   font-size: 12px;
 }
 
+.image {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: cover;
+  background-image: url('../../../assets/stslogo.jpg');
+}
+
 .row, gallery, .container {
   max-width: 100%;
 }
